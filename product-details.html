@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - FashionStore</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/product-detail.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">FashionStore</a>
+      
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle">☰</button>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="products.html">Shop All</a></li>
+          <li><a href="products.html?category=men">Men</a></li>
+          <li><a href="products.html?category=women">Women</a></li>
+          <li><a href="products.html?category=kids">Kids</a></li>
+          <li><a href="products.html?sale=true">Sale</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <div class="search-bar">
+          <input type="text" placeholder="Search products..." id="search-input">
+          <button type="button">🔍</button>
+        </div>
+        
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="icon">🌙</span>
+        </button>
+        
+        <button class="icon-btn" id="account-btn" aria-label="Account">
+          👤
+        </button>
+        
+        <button class="icon-btn" id="wishlist-btn" aria-label="Wishlist">
+          ♡
+        </button>
+        
+        <button class="icon-btn" id="cart-btn" aria-label="Cart">
+          🛒
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb container">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="products.html">Shop</a>
+    <span>›</span>
+    <span id="breadcrumb-category">Category</span>
+    <span>›</span>
+    <span id="breadcrumb-product">Product</span>
+  </div>
+
+  <!-- Product Detail Section -->
+  <main class="product-detail-page container">
+    <div class="product-detail-container">
+      <!-- Product Images -->
+      <div class="product-images">
+        <div class="main-image" id="main-image">
+          <button class="wishlist-btn-large" id="wishlist-btn-large">♡</button>
+          <span class="product-badge" id="product-badge"></span>
+          <!-- Main image will be loaded here -->
+        </div>
+        
+        <div class="thumbnail-images" id="thumbnail-images">
+          <!-- Thumbnails will be loaded here -->
+        </div>
+      </div>
+
+      <!-- Product Info -->
+      <div class="product-info-section">
+        <div class="product-category-tag" id="product-category-tag"></div>
+        
+        <h1 class="product-title" id="product-title">Loading...</h1>
+        
+        <div class="product-rating-section">
+          <div class="rating-stars" id="rating-stars"></div>
+          <span class="rating-text" id="rating-text"></span>
+          <a href="#reviews" class="reviews-link" id="reviews-link"></a>
+        </div>
+
+        <div class="product-price-section">
+          <span class="current-price" id="current-price"></span>
+          <span class="original-price" id="original-price"></span>
+          <span class="discount-badge" id="discount-badge"></span>
+        </div>
+
+        <div class="product-description" id="product-description">
+          <p>High-quality product made with premium materials. Perfect for everyday wear and special occasions.</p>
+        </div>
+
+        <!-- Color Selection -->
+        <div class="selection-group">
+          <label class="selection-label">Color: <span id="selected-color">Select</span></label>
+          <div class="color-selector" id="color-selector">
+            <!-- Colors will be loaded here -->
+          </div>
+        </div>
+
+        <!-- Size Selection -->
+        <div class="selection-group">
+          <label class="selection-label">
+            Size: <span id="selected-size">Select</span>
+            <a href="#" class="size-guide-link">Size Guide</a>
+          </label>
+          <div class="size-selector" id="size-selector">
+            <!-- Sizes will be loaded here -->
+          </div>
+        </div>
+
+        <!-- Quantity Selection -->
+        <div class="selection-group">
+          <label class="selection-label">Quantity:</label>
+          <div class="quantity-selector">
+            <button class="qty-btn" id="qty-decrease">−</button>
+            <input type="number" class="qty-input" id="qty-input" value="1" min="1" max="10">
+            <button class="qty-btn" id="qty-increase">+</button>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <button class="btn btn-primary btn-full btn-add-to-cart" id="btn-add-to-cart">
+            Add to Cart
+          </button>
+          <button class="btn btn-secondary btn-full btn-buy-now" id="btn-buy-now">
+            Buy Now
+          </button>
+        </div>
+
+        <!-- Product Features -->
+        <div class="product-features">
+          <div class="feature-item">
+            <span class="feature-icon">🚚</span>
+            <div class="feature-text">
+              <strong>Free Shipping</strong>
+              <p>On orders over $50</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">↩️</span>
+            <div class="feature-text">
+              <strong>Easy Returns</strong>
+              <p>30-day return policy</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">✓</span>
+            <div class="feature-text">
+              <strong>Authentic</strong>
+              <p>100% genuine products</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Share Section -->
+        <div class="share-section">
+          <span>Share:</span>
+          <div class="share-buttons">
+            <button class="share-btn" title="Share on Facebook">📘</button>
+            <button class="share-btn" title="Share on Twitter">🐦</button>
+            <button class="share-btn" title="Share on Pinterest">📌</button>
+            <button class="share-btn" title="Copy Link">🔗</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Details Tabs -->
+    <div class="product-tabs">
+      <div class="tabs-header">
+        <button class="tab-btn active" data-tab="details">Details</button>
+        <button class="tab-btn" data-tab="specifications">Specifications</button>
+        <button class="tab-btn" data-tab="reviews">Reviews</button>
+        <button class="tab-btn" data-tab="shipping">Shipping & Returns</button>
+      </div>
+
+      <div class="tabs-content">
+        <!-- Details Tab -->
+        <div class="tab-panel active" id="tab-details">
+          <h3>Product Details</h3>
+          <p>This premium quality product is designed with attention to detail and crafted from the finest materials. Perfect for any occasion, it combines style, comfort, and durability.</p>
+          
+          <h4>Features:</h4>
+          <ul>
+            <li>Premium quality materials</li>
+            <li>Comfortable fit for all-day wear</li>
+            <li>Durable construction</li>
+            <li>Easy care and maintenance</li>
+            <li>Available in multiple colors and sizes</li>
+          </ul>
+
+          <h4>Care Instructions:</h4>
+          <ul>
+            <li>Machine wash cold with similar colors</li>
+            <li>Do not bleach</li>
+            <li>Tumble dry low</li>
+            <li>Iron on low heat if needed</li>
+          </ul>
+        </div>
+
+        <!-- Specifications Tab -->
+        <div class="tab-panel" id="tab-specifications">
+          <h3>Specifications</h3>
+          <table class="specs-table">
+            <tr>
+              <td><strong>Material:</strong></td>
+              <td>100% Premium Cotton</td>
+            </tr>
+            <tr>
+              <td><strong>Fit:</strong></td>
+              <td>Regular Fit</td>
+            </tr>
+            <tr>
+              <td><strong>Pattern:</strong></td>
+              <td>Solid</td>
+            </tr>
+            <tr>
+              <td><strong>Sleeve:</strong></td>
+              <td>Short Sleeve</td>
+            </tr>
+            <tr>
+              <td><strong>Occasion:</strong></td>
+              <td>Casual, Everyday</td>
+            </tr>
+            <tr>
+              <td><strong>Season:</strong></td>
+              <td>All Season</td>
+            </tr>
+            <tr>
+              <td><strong>Country of Origin:</strong></td>
+              <td>Made in USA</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Reviews Tab -->
+        <div class="tab-panel" id="tab-reviews">
+          <h3>Customer Reviews</h3>
+          
+          <div class="reviews-summary">
+            <div class="reviews-score">
+              <div class="score-number" id="review-score">4.5</div>
+              <div class="score-stars" id="review-stars">⭐⭐⭐⭐⭐</div>
+              <div class="score-text" id="review-count">Based on 128 reviews</div>
+            </div>
+            
+            <div class="reviews-breakdown">
+              <div class="rating-bar">
+                <span>5 ⭐</span>
+                <div class="bar"><div class="bar-fill" style="width: 70%"></div></div>
+                <span>70%</span>
+              </div>
+              <div class="rating-bar">
+                <span>4 ⭐</span>
+                <div class="bar"><div class="bar-fill" style="width: 20%"></div></div>
+                <span>20%</span>
+              </div>
+              <div class="rating-bar">
+                <span>3 ⭐</span>
+                <div class="bar"><div class="bar-fill" style="width: 7%"></div></div>
+                <span>7%</span>
+              </div>
+              <div class="rating-bar">
+                <span>2 ⭐</span>
+                <div class="bar"><div class="bar-fill" style="width: 2%"></div></div>
+                <span>2%</span>
+              </div>
+              <div class="rating-bar">
+                <span>1 ⭐</span>
+                <div class="bar"><div class="bar-fill" style="width: 1%"></div></div>
+                <span>1%</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" id="write-review-btn">Write a Review</button>
+
+          <div class="reviews-list" id="reviews-list">
+            <!-- Sample Review -->
+            <div class="review-item">
+              <div class="review-header">
+                <div class="reviewer-info">
+                  <strong>John Doe</strong>
+                  <span class="review-date">2 weeks ago</span>
+                </div>
+                <div class="review-rating">⭐⭐⭐⭐⭐</div>
+              </div>
+              <div class="review-content">
+                <h4>Excellent quality!</h4>
+                <p>This product exceeded my expectations. The quality is outstanding and the fit is perfect. Highly recommend!</p>
+              </div>
+              <div class="review-helpful">
+                <span>Was this helpful?</span>
+                <button class="helpful-btn">👍 Yes (12)</button>
+                <button class="helpful-btn">👎 No (1)</button>
+              </div>
+            </div>
+
+            <div class="review-item">
+              <div class="review-header">
+                <div class="reviewer-info">
+                  <strong>Jane Smith</strong>
+                  <span class="review-date">1 month ago</span>
+                </div>
+                <div class="review-rating">⭐⭐⭐⭐</div>
+              </div>
+              <div class="review-content">
+                <h4>Great value for money</h4>
+                <p>Good quality product at a reasonable price. The color is exactly as shown in the pictures.</p>
+              </div>
+              <div class="review-helpful">
+                <span>Was this helpful?</span>
+                <button class="helpful-btn">👍 Yes (8)</button>
+                <button class="helpful-btn">👎 No (0)</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shipping Tab -->
+        <div class="tab-panel" id="tab-shipping">
+          <h3>Shipping Information</h3>
+          <p><strong>Free Standard Shipping</strong> on orders over $50</p>
+          <p>Standard shipping typically arrives in 5-7 business days.</p>
+          
+          <h4>Shipping Options:</h4>
+          <ul>
+            <li><strong>Standard Shipping:</strong> 5-7 business days - FREE over $50</li>
+            <li><strong>Express Shipping:</strong> 2-3 business days - $9.99</li>
+            <li><strong>Next Day Delivery:</strong> 1 business day - $19.99</li>
+          </ul>
+
+          <h3>Returns & Exchanges</h3>
+          <p>We offer a <strong>30-day return policy</strong> on all items. If you're not completely satisfied with your purchase, you can return it for a full refund or exchange.</p>
+          
+          <h4>Return Process:</h4>
+          <ol>
+            <li>Contact our customer service within 30 days of delivery</li>
+            <li>Receive your return authorization and shipping label</li>
+            <li>Pack the item securely in its original packaging</li>
+            <li>Ship the item back using the provided label</li>
+            <li>Receive your refund within 5-7 business days</li>
+          </ol>
+
+          <h4>Return Conditions:</h4>
+          <ul>
+            <li>Items must be unworn and unwashed</li>
+            <li>Original tags must be attached</li>
+            <li>Items must be in original packaging</li>
+            <li>Proof of purchase required</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Products -->
+    <section class="related-products">
+      <h2 class="section-title">You May Also Like</h2>
+      <div class="related-products-grid" id="related-products-grid">
+        <!-- Related products will be loaded here -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Size Guide</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="products.html?category=men">Men</a></li>
+          <li><a href="products.html?category=women">Women</a></li>
+          <li><a href="products.html?category=kids">Kids</a></li>
+          <li><a href="products.html?sale=true">Sale</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#">📘</a>
+          <a href="#">📷</a>
+          <a href="#">🐦</a>
+          <a href="#">📌</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 FashionStore. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/product-detail.js"></script>
+</body>
+</html>

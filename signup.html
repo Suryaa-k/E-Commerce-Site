@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Fashion Store</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">FashionStore</a>
+      
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <span class="icon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Sign Up Form -->
+  <main class="auth-container">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1>Create Account</h1>
+        <p>Join our fashion community</p>
+      </div>
+
+      <form id="signup-form" class="auth-form">
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input 
+            type="text" 
+            id="fullname" 
+            class="form-input" 
+            placeholder="Enter your full name"
+            required
+          >
+          <span class="error-message" id="fullname-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input 
+            type="email" 
+            id="email" 
+            class="form-input" 
+            placeholder="Enter your email"
+            required
+          >
+          <span class="error-message" id="email-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="password-input-wrapper">
+            <input 
+              type="password" 
+              id="password" 
+              class="form-input" 
+              placeholder="Create a password"
+              required
+            >
+            <button type="button" class="password-toggle" id="password-toggle">
+              👁️
+            </button>
+          </div>
+          <div class="password-strength" id="password-strength">
+            <div class="strength-bar">
+              <div class="strength-fill" id="strength-fill"></div>
+            </div>
+            <span class="strength-text" id="strength-text">Password strength</span>
+          </div>
+          <span class="error-message" id="password-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <div class="password-input-wrapper">
+            <input 
+              type="password" 
+              id="confirm-password" 
+              class="form-input" 
+              placeholder="Confirm your password"
+              required
+            >
+            <button type="button" class="password-toggle" id="confirm-password-toggle">
+              👁️
+            </button>
+          </div>
+          <span class="error-message" id="confirm-password-error"></span>
+        </div>
+
+        <div class="form-options">
+          <label class="checkbox-label">
+            <input type="checkbox" id="terms" required>
+            <span>I agree to <a href="#" class="link">Terms & Conditions</a> and <a href="#" class="link">Privacy Policy</a></span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">
+          Sign Up
+        </button>
+      </form>
+
+      <div class="divider">
+        <span>OR</span>
+      </div>
+
+      <div class="social-login">
+        <button class="btn-social btn-google">
+          <span class="social-icon">🔵</span>
+          Sign up with Google
+        </button>
+        <button class="btn-social btn-facebook">
+          <span class="social-icon">📘</span>
+          Sign up with Facebook
+        </button>
+        <button class="btn-social btn-apple">
+          <span class="social-icon">🍎</span>
+          Sign up with Apple
+        </button>
+      </div>
+
+      <div class="auth-footer">
+        <p>Already have an account? <a href="signin.html" class="link">Sign In</a></p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

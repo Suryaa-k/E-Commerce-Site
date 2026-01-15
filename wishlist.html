@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Wishlist - FashionStore</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/wishlist.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">FashionStore</a>
+      
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle">☰</button>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="products.html">Shop All</a></li>
+          <li><a href="products.html?category=men">Men</a></li>
+          <li><a href="products.html?category=women">Women</a></li>
+          <li><a href="products.html?category=kids">Kids</a></li>
+          <li><a href="products.html?sale=true">Sale</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <div class="search-bar">
+          <input type="text" placeholder="Search products..." id="search-input">
+          <button type="button">🔍</button>
+        </div>
+        
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="icon">🌙</span>
+        </button>
+        
+        <button class="icon-btn" id="account-btn" aria-label="Account">
+          👤
+        </button>
+        
+        <button class="icon-btn" id="wishlist-btn" aria-label="Wishlist">
+          ♡
+        </button>
+        
+        <button class="icon-btn" id="cart-btn" aria-label="Cart">
+          🛒
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb container">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <span>Wishlist</span>
+  </div>
+
+  <!-- Wishlist Content -->
+  <main class="wishlist-page container">
+    <div class="wishlist-header">
+      <h1>My Wishlist</h1>
+      <button class="btn btn-secondary" id="clear-wishlist">Clear All</button>
+    </div>
+
+    <div class="wishlist-content" id="wishlist-content">
+      <!-- Wishlist items will be loaded here -->
+    </div>
+
+    <!-- Empty State -->
+    <div class="empty-wishlist" id="empty-wishlist" style="display: none;">
+      <div class="empty-icon">♡</div>
+      <h2>Your wishlist is empty</h2>
+      <p>Save your favorite items here to buy them later</p>
+      <a href="products.html" class="btn btn-primary">Start Shopping</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Size Guide</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="products.html?category=men">Men</a></li>
+          <li><a href="products.html?category=women">Women</a></li>
+          <li><a href="products.html?category=kids">Kids</a></li>
+          <li><a href="products.html?sale=true">Sale</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#">📘</a>
+          <a href="#">📷</a>
+          <a href="#">🐦</a>
+          <a href="#">📌</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 FashionStore. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/wishlist.js"></script>
+</body>
+</html>

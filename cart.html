@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - FashionStore</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">FashionStore</a>
+      
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle">☰</button>
+      
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="products.html">Shop All</a></li>
+          <li><a href="products.html?category=men">Men</a></li>
+          <li><a href="products.html?category=women">Women</a></li>
+          <li><a href="products.html?category=kids">Kids</a></li>
+          <li><a href="products.html?sale=true">Sale</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <div class="search-bar">
+          <input type="text" placeholder="Search products..." id="search-input">
+          <button type="button">🔍</button>
+        </div>
+        
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="icon">🌙</span>
+        </button>
+        
+        <button class="icon-btn" id="account-btn" aria-label="Account">
+          👤
+        </button>
+        
+        <button class="icon-btn" id="wishlist-btn" aria-label="Wishlist">
+          ♡
+        </button>
+        
+        <button class="icon-btn" id="cart-btn" aria-label="Cart">
+          🛒
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb container">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <span>Shopping Cart</span>
+  </div>
+
+  <!-- Cart Content -->
+  <main class="cart-page container">
+    <h1 class="page-title">Shopping Cart</h1>
+
+    <div class="cart-container">
+      <!-- Cart Items -->
+      <div class="cart-items-section">
+        <div class="cart-items" id="cart-items">
+          <!-- Cart items will be loaded here -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-cart" id="empty-cart" style="display: none;">
+          <div class="empty-icon">🛒</div>
+          <h2>Your cart is empty</h2>
+          <p>Add some products to get started</p>
+          <a href="products.html" class="btn btn-primary">Continue Shopping</a>
+        </div>
+      </div>
+
+      <!-- Cart Summary -->
+      <div class="cart-summary" id="cart-summary">
+        <h2>Order Summary</h2>
+        
+        <div class="summary-row">
+          <span>Subtotal (<span id="items-count">0</span> items)</span>
+          <span id="subtotal">₹0</span>
+        </div>
+        
+        <div class="summary-row">
+          <span>Shipping</span>
+          <span id="shipping">₹0</span>
+        </div>
+        
+        <div class="summary-row discount-row" id="discount-row" style="display: none;">
+          <span>Discount</span>
+          <span class="discount-amount" id="discount">-₹0</span>
+        </div>
+        
+        <div class="summary-divider"></div>
+        
+        <div class="summary-row total-row">
+          <span>Total</span>
+          <span id="total">₹0</span>
+        </div>
+
+        <button class="btn btn-primary btn-full btn-checkout" id="checkout-btn">
+          Proceed to Checkout
+        </button>
+
+        <button class="btn btn-secondary btn-full" onclick="window.location.href='products.html'">
+          Continue Shopping
+        </button>
+
+        <!-- Promo Code -->
+        <div class="promo-code">
+          <h3>Have a promo code?</h3>
+          <div class="promo-input-group">
+            <input type="text" id="promo-input" placeholder="Enter code">
+            <button class="btn btn-secondary" id="apply-promo">Apply</button>
+          </div>
+          <div class="promo-message" id="promo-message"></div>
+        </div>
+
+        <!-- Features -->
+        <div class="cart-features">
+          <div class="feature-item">
+            <span>🚚</span>
+            <span>Free shipping on orders over ₹4,000</span>
+          </div>
+          <div class="feature-item">
+            <span>↩️</span>
+            <span>30-day easy returns</span>
+          </div>
+          <div class="feature-item">
+            <span>🔒</span>
+            <span>Secure checkout</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Size Guide</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="products.html?category=men">Men</a></li>
+          <li><a href="products.html?category=women">Women</a></li>
+          <li><a href="products.html?category=kids">Kids</a></li>
+          <li><a href="products.html?sale=true">Sale</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#">📘</a>
+          <a href="#">📷</a>
+          <a href="#">🐦</a>
+          <a href="#">📌</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 FashionStore. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
