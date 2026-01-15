@@ -53,19 +53,19 @@ A fully responsive, feature-rich e-commerce website built with vanilla HTML, CSS
 ## 📸 Screenshots
 
 ### Homepage
-![Homepage](https://via.placeholder.com/800x400?text=Homepage+Screenshot)
+<img width="2560" height="1600" alt="Screenshot (125)" src="https://github.com/user-attachments/assets/bbc60a6b-2482-4208-96df-f3029ed2da3e" />
 
 ### Product Listing
-![Product Listing](https://via.placeholder.com/800x400?text=Product+Listing+Screenshot)
+<img width="2560" height="1600" alt="Screenshot (126)" src="https://github.com/user-attachments/assets/7387d01d-791f-40f9-871c-8cd92bfeeccf" />
 
-### Product Detail
-![Product Detail](https://via.placeholder.com/800x400?text=Product+Detail+Screenshot)
+### Wishlist
+<img width="2560" height="1600" alt="Screenshot (129)" src="https://github.com/user-attachments/assets/dbbe3ef2-3c6a-47bb-8726-973dfcdcb962" />
 
 ### Shopping Cart
-![Shopping Cart](https://via.placeholder.com/800x400?text=Shopping+Cart+Screenshot)
+<img width="2560" height="1600" alt="Screenshot (130)" src="https://github.com/user-attachments/assets/dee96df2-23d0-4ff0-a562-1170fa392a60" />
 
-### Dark Theme
-![Dark Theme](https://via.placeholder.com/800x400?text=Dark+Theme+Screenshot)
+### Fotter Section
+<img width="2560" height="1600" alt="Screenshot (127)" src="https://github.com/user-attachments/assets/7652049e-2e18-4830-9c43-887cbf6c0540" />
 
 ## 🛠️ Technologies Used
 
@@ -101,3 +101,4 @@ ecommerce-website/
     ├── product-detail.js (updated)
     ├── wishlist.js (NEW)
     └── cart.js (NEW)
+
